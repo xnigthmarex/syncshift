@@ -215,7 +215,7 @@ useEffect(() => {
 
         {/* right side rectangle */}
         <div className="bg-[#0d0d0d] h-16 pl-40 w-32 grid grid-rows-8 justify-center rounded-r-3xl border-white border-4" id="rightside">
-        <div className = " flex  justify-center pt-6 text-2xl w-full">Task History</div>
+        <div className = " flex  justify-center pt-6 text-2xl w-full text-white">Task History</div>
         <div className="task-history-list w-full">
   {taskHistoryArray.length === 0 ? (
     <span className=" text-4xl text-red-600 text-center justify ">
