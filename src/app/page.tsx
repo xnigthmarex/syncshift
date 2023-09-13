@@ -172,7 +172,7 @@ useEffect(() => {
     <div className=" mx-auto max-w-screen-xl">
   <header className="pt-3 border-b-4 border-black" id="header">
   <div className="grid grid-cols-3 items-center">
-    <h1 className="text-4xl col-start-1 flex items-center justify-start">
+    <h1 className="text-4xl col-start-1 flex items-center justify-start text-white">
       <img className="w-12 h-10 mr-2" src="/testlogo.jpg" alt="logo" />
       SyncShift
     </h1>
@@ -195,8 +195,8 @@ useEffect(() => {
 
       
       <div className="grid grid-rows-3 grid-flow-col bg-black rounded-full h-32 w-32 z-10 justify-center items-center border-white border-4  text-center" id="clock">
-  <div className="flex items-center justify-center md:text-3xl ">Task Timer</div>
-  <div className="flex items-center justify-center md:text-6xl pb-12">{timer}</div>
+  <div className="flex items-center justify-center md:text-3xl text-white ">Task Timer</div>
+  <div className="flex items-center justify-center md:text-6xl pb-12 text-white">{timer}</div>
   
   <div className="flex items-center justify-center pb-20">
   {!isActive ? (
