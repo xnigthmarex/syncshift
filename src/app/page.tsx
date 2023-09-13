@@ -177,6 +177,7 @@ useEffect(() => {
     </h1>
     <h1 className="text-3xl text-white col-start-2 col-end-3 text-center">
       {time}
+      
     </h1>
     <div className=" text-white col-start-3 text-center flex items-center">
       <span className = "text-3xl">Welcome {session?.user?.name}</span>
