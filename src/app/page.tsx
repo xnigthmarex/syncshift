@@ -215,22 +215,27 @@ useEffect(() => {
         <div className="bg-[#0d0d0d] h-16 pl-40 w-32 grid grid-rows-8 justify-center rounded-r-3xl border-white border-4" id="rightside">
         <div className = " flex  justify-center pt-6 text-2xl w-full">Task History</div>
         <div className="task-history-list w-full">
-        {taskHistoryArray.map((task, index) => (
-          <div key={index} className={`task-history-item flex flex-col justify-between border rounded-lg py-1 px-4 m-2 ${task.wasStopped ? 'border-green-500' : 'border-red-500'}`}>
-          {/* Replace `task.name`, `task.dateStarted`, etc. with the actual properties of your task object */}
-          <div className="flex justify-between task-details">
-            <span className="task-name text-white text-xl">{task.task}</span>
-            <h1 className="task-time text-white text-lg">{task.timeSpent}</h1>
-          </div>
-          <div className="task-date-details">
-            <h3 className="task-date text-white text-sm">{new Date(task.dateStarted).toLocaleString()} - {new Date(task.dateEnded).toLocaleString()}</h3>
-          </div>
-          {/* Add more details here */}
+  {taskHistoryArray.length === 0 ? (
+    <span className=" text-4xl text-red-600 text-center justify ">
+      GET WORKING !!!!!!!!!!!!
+    </span>
+  ) : (
+    taskHistoryArray.map((task, index) => (
+      <div key={index} className={`task-history-item flex flex-col justify-between border rounded-lg py-1 px-4 m-2 ${task.wasStopped ? 'border-green-500' : 'border-red-500'}`}>
+        {/* Replace `task.name`, `task.dateStarted`, etc. with the actual properties of your task object */}
+        <div className="flex justify-between task-details">
+          <span className="task-name text-white text-xl">{task.task}</span>
+          <h1 className="task-time text-white text-lg">{task.timeSpent}</h1>
         </div>
-        
-        
-        ))}
+        <div className="task-date-details">
+          <h3 className="task-date text-white text-sm">{new Date(task.dateStarted).toLocaleString()} - {new Date(task.dateEnded).toLocaleString()}</h3>
+        </div>
+        {/* Add more details here */}
       </div>
+    ))
+  )}
+</div>
+
     </div>
 
       </div>
