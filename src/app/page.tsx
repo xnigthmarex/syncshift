@@ -168,6 +168,7 @@ useEffect(() => {
   }, []);
 
   return (
+    <div className = "bg-black">
     <div className=" mx-auto max-w-screen-xl">
   <header className="pt-3 border-b-4 border-black" id="header">
   <div className="grid grid-cols-3 items-center">
@@ -242,5 +243,6 @@ useEffect(() => {
       </div>
     </div>
     </div>
+      </div>
   );
 }
