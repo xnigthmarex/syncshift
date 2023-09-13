@@ -2,7 +2,15 @@ import NextAuth, { NextAuthOptions } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import GoogleProvider from 'next-auth/providers/google';
 import { authenticateUser, handleGoogleSignIn } from './serverActions';
+import { DefaultSession } from "next-auth";
 
+declare module "next-auth" {
+  interface Session {
+    user?: {
+      id: string;
+    } & DefaultSession["user"];
+  }
+}
 
 // Ensure environment variables are set
 if (!process.env.GOOGLE_CLIENT_ID || !process.env.GOOGLE_CLIENT_SECRET) {
